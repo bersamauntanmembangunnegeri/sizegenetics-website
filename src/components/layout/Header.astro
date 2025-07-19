@@ -1,0 +1,117 @@
+---
+// Header component for SizeGenetics website
+---
+
+<header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-sm">SG</span>
+          </div>
+          <span class="text-xl font-bold text-gray-900">SizeGenetics</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="/products" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          Products
+        </a>
+        <a href="/how-it-works" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          How It Works
+        </a>
+        <a href="/clinical-studies" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          Clinical Studies
+        </a>
+        <a href="/education" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          Education
+        </a>
+        <a href="/testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          Testimonials
+        </a>
+        <a href="/faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          FAQ
+        </a>
+        <a href="/support" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          Support
+        </a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a 
+          href="/products/sizegenetics-device" 
+          class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+        >
+          Shop Now
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button 
+          type="button" 
+          class="mobile-menu-button text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+          aria-label="Toggle mobile menu"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+        <a href="/products" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          Products
+        </a>
+        <a href="/how-it-works" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          How It Works
+        </a>
+        <a href="/clinical-studies" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          Clinical Studies
+        </a>
+        <a href="/education" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          Education
+        </a>
+        <a href="/testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          Testimonials
+        </a>
+        <a href="/faq" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          FAQ
+        </a>
+        <a href="/support" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+          Support
+        </a>
+        <div class="px-3 py-2">
+          <a 
+            href="/products/sizegenetics-device" 
+            class="block w-full text-center bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Shop Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
+
